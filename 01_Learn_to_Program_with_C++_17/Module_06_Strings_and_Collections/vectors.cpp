@@ -12,9 +12,11 @@ using std::string;
 #include <vector>
 using std::vector;
 
-int main() {
+int main()
+{
     vector<int> nums;
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < 10; i++)
+    {
         nums.push_back(i);
     }
     nums[5] = 3;
@@ -24,29 +26,34 @@ int main() {
 
     cout << "The vector 'nums' has " << nums.size() << " elements...\n";
 
-    for (auto n:nums) {
+    for (auto n : nums)
+    {
         cout << n << ' ';
     }
     cout << '\n';
 
-    for (unsigned int i = 0; i < nums.size(); i++){
+    for (unsigned int i = 0; i < nums.size(); i++)
+    {
         cout << nums[i] << ' ';
     }
     cout << '\n';
 
-    for (auto i = 0; i < nums.size(); i++){
+    for (auto i = 0; i < nums.size(); i++)
+    {
         cout << nums[i] << ' ';
     }
     cout << '\n';
 
-    for (auto iter = begin(nums); iter != end(nums); iter++){
+    for (auto iter = begin(nums); iter != end(nums); iter++)
+    {
         cout << *iter << ' ';
     }
     cout << '\n';
 
     vector<string> words;
     cout << "Enter three words: ";
-    for (int i; i < 3; i++){
+    for (int i; i < 3; i++)
+    {
         string s;
         cin >> s;
         words.push_back(s);
@@ -54,13 +61,16 @@ int main() {
 
     cout << "The vector 'words' has " << words.size() << " elements...\n";
 
-    for(auto w:words) {
+    for (auto w : words)
+    {
         cout << " - " << w << '\n';
     }
 
     cout << "Sorted..." << '\n';
-    sort(begin(words), end(words)); // The range of elements, given the first and last as iterators.
-    for (auto item : words) {
+    // The range of elements, given the first and last as iterators.
+    sort(begin(words), end(words));
+    for (auto item : words)
+    {
         cout << " - " << item << '\n';
     }
 

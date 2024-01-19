@@ -6,3 +6,12 @@ The recommended way to interact with this repository is using [Code Spaces](http
 
 Samples from the following courses are included:
 1. [Learn to Program with C++ 17](https://www.pluralsight.com/courses/learn-program-cplusplus)
+
+## Linting
+Use `clang-tidy` for static analysis and `clang-format` to format the source files.
+```
+sudo apt update
+sudo apt install clang-tidy clang-format
+clang-tidy ./**/*.cpp
+clang-format --style=Microsoft ./**/*.cpp ./**/*.h -i
+```

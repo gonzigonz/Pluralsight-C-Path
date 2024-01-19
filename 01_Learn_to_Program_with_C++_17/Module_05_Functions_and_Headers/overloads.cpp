@@ -1,10 +1,11 @@
 #include <iostream>
 
-# include "functions.h"
+#include "functions.h"
 
 using std::cout;
 
-int main() {
+int main()
+{
     cout << add(1.4, 1.6) << '\n';
     cout << add(5, 6, 7.2) << '\n';
     cout << test(true) << '\n';

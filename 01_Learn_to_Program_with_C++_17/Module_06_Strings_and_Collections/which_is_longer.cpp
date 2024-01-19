@@ -1,14 +1,16 @@
 #include <iostream>
 #include <string>
 
-using std::cout;
 using std::cin;
+using std::cout;
 using std::string;
 
-int main(){
+int main()
+{
     cout << "Welcome to Which Is Longer\n\n";
     bool done = false;
-    while(!done){
+    while (!done)
+    {
         cout << "Enter the first phrase: ";
         string phrase1;
         // cin >> phrase1; Use getline to handle multiple words.
@@ -18,11 +20,16 @@ int main(){
         // cin >> phrase2; Use getline to handle multiple words.
         getline(cin, phrase2);
 
-        if (phrase1.length() == phrase2.length()) {
+        if (phrase1.length() == phrase2.length())
+        {
             cout << "Same length! The phrases '" << phrase1 << "' and '" << phrase2 << "' are the same length.\n";
-        } else if (phrase1.length() < phrase2.length()) {
+        }
+        else if (phrase1.length() < phrase2.length())
+        {
             cout << "The phrase '" << phrase2 << "' is longer!\n";
-        } else {
+        }
+        else
+        {
             cout << "The phrase '" << phrase1 << "' is longer!\n";
         }
 

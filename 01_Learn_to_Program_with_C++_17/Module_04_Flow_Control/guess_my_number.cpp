@@ -1,25 +1,32 @@
 #include <iostream>
 
-using std::cout;
 using std::cin;
+using std::cout;
 
-int main(){
+int main()
+{
     cout << "Welcome to Guess My Number\n\n";
 
     // initialize random seed
-    srand ( time(NULL) );
+    srand(time(NULL));
     // generate secret number
     int number = rand() % 100 + 1;
 
     cout << "Enter a number between 0 and 100: ";
-    int guess;
-    while(guess != number){
+    int guess = 0;
+    while (guess != number)
+    {
         cin >> guess;
-        if (guess == number) {
+        if (guess == number)
+        {
             cout << "Congratulations! " << guess << " is the correct number.\n";
-        } else if (guess < number) {
+        }
+        else if (guess < number)
+        {
             cout << "Higher:\n";
-        } else {
+        }
+        else
+        {
             cout << "Lower:\n";
         }
     }

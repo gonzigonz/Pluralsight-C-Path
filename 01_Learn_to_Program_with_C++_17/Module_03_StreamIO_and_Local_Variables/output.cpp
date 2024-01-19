@@ -1,10 +1,11 @@
 #include <iostream>
 
 // use explicit namespace types
-using std:: cout;
-using std:: cin;
+using std::cin;
+using std::cout;
 
-int main() {
+int main()
+{
     cout << "Hello" << '\n';
     cout << 34 << '\n';
 
@@ -20,13 +21,13 @@ int main() {
     // type safety; be careful.
     // e.g. of data loss
     i = static_cast<int>(4.9); // e.g of explicit data type casting
-    int j = 9/5;
+    int j = 9 / 5;
     cout << "i is " << i << '\n' << "j is " << j << '\n';
 
     // e.g. of correct use
     float f = 4.9;
     cout << "f is " << f << '\n';
-    f = 9.0/5;
+    f = 9.0 / 5;
     cout << "f is " << f << '\n';
 
     cout << '\n' << '\n';

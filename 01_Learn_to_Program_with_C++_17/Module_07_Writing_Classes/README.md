@@ -14,4 +14,5 @@ make
 
 # Only what's changed makefile example...
 make -f ./ChangesOnly.mk
+./Simple
 ```

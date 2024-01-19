@@ -1,5 +1,6 @@
 // Compile with clang++ ./small.cpp
 
-int main() {
+int main()
+{
     return 0;
 }

@@ -7,40 +7,59 @@ using std::addressof;
 #include <string>
 using std::string;
 
-class Check {
-private:
+class Check
+{
+  private:
     int amount;
 
-public:
+  public:
     Check(int amount);
-    int Amount() const { return amount; }
+    int Amount() const
+    {
+        return amount;
+    }
 };
-Check::Check(int amt) : amount(amt) {}
+Check::Check(int amt) : amount(amt)
+{
+}
 
-class Account {
-private:
+class Account
+{
+  private:
     int balance;
 
-public:
+  public:
     Account();
     ~Account();
-    void Deposit(int amount) { balance += amount; }
-    int GetBalance() const { return balance; }
+    void Deposit(int amount)
+    {
+        balance += amount;
+    }
+    int GetBalance() const
+    {
+        return balance;
+    }
 };
-Account::Account() : balance(0) {}
-Account::~Account() {
+Account::Account() : balance(0)
+{
+}
+Account::~Account()
+{
     cout << "I'm the destructor for the object at address " << this << '\n';
 }
 
-void depositByValue(Account acc, int amount) {
+void depositByValue(Account acc, int amount)
+{
     acc.Deposit(amount);
 }
 
-void depositByRef(Account& acc, int amount) {
+void depositByRef(Account &acc, int amount)
+{
     acc.Deposit(amount);
 }
 
-int main() {
+int main()
+{
     cout << "Let's open a new account...\n";
     Account acc;
     cout << "New account object created at address " << addressof(acc) << '\n';
