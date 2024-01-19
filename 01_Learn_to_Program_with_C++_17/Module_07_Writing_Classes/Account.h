@@ -13,9 +13,9 @@ private:
 
 public:
     Account();
-    std::vector<std::string> Report();
+    std::vector<std::string> Report() const; // use const to make member functions read-only.
     bool Deposit(int amount);
     bool Withdraw(int amount);
 
-    int Balance() { return balance; }
+    int Balance() const { return balance; } // use const to make member functions read-only.
 };

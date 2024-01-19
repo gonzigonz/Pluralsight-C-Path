@@ -9,5 +9,5 @@ private:
 
 public:
     Transaction(int amount, std::string kind);
-    std::string Report();
+    std::string Report() const; // use const to make member functions read-only.
 };

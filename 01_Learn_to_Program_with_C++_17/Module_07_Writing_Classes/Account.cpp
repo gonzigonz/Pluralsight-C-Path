@@ -6,7 +6,7 @@ using std::vector;
 
 Account::Account() : balance(0), overdraft(20) {}
 
-vector<string> Account::Report(){
+vector<string> Account::Report() const { // use const to make member functions read-only.
     vector<string> report;
     report.push_back("----------------------");
     report.push_back(" Balance is $" + to_string(balance));

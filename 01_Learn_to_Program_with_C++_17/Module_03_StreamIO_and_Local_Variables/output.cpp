@@ -19,7 +19,7 @@ int main() {
 
     // type safety; be careful.
     // e.g. of data loss
-    i = 4.9;
+    i = static_cast<int>(4.9); // e.g of explicit data type casting
     int j = 9/5;
     cout << "i is " << i << '\n' << "j is " << j << '\n';
 
